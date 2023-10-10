@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.country-detail{
+    font-weight: 700;
+
+}
+.navbar-title{
+  color: black;
+}
+::-webkit-input-placeholder {
+  color: #858585;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+  header,.search-icon{
+    background-color: #ffff;
+  }
+  body{
+    background-color: #fafafa;
+  }
+  .dark-mode {
+    background-color: #202c37;;
+    color: #fff;
+  }
+  
+  .dark-mode .navbar {
+    background-color: #2b3945;
+    color: #fff;
+  }
+  .dark-mode .search-icon  {
+    background-color: #2b3945;
+    color: #fff;
+  }
+
+  .dark-mode #darkModeToggle{
+    color: #fff;
+  }
+  .dark-mode .card {
+    background-color:#2b3945;
+    color: #fff;
+    border: none;
+  }
+  
+  .dark-mode .card-title {
+    color: #fff;
+  }
+  .dark-mode .navbar-title {
+    color: #fff;
+  }
+  
+  .dark-mode .card-text {
+    color: #ccc;
+  }
+  .dark-mode .search {
+    background-color: #2b3945;
+    color: #fff;
+  }
+  
+  .dark-mode .category {
+    background-color: #2b3945;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  /* font 800 */
+  .navbar-title ,.card-title,button{
+
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+  }
+  /* font 600 */
+  select,.country-detail{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600 ;
+  }
+  /* font 300 */
+  .country-detail-2{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .w-30{
+    margin-left: 1%;
+    width: 30%;
+  }
+
+.favourite-section{
+  width: 20% !important;
+  height: 70%;
+  position: fixed;
+  background-color: #ffff;
+  font-family: 'Nunito Sans', sans-serif;
+font-weight: 900 !important;
+  /* margin-top: 2%; */
+}
+.h-80{
+  height: 95%;
+
+}
+.favourite-container{
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.favourite-item-img{
+  width: 15%;
+  border-bottom-left-radius: 2%;
+
+}
+
+.cancel-button{
+  background-color: #fff;
+  padding-left: 45%;
+}
+
+
+
+#container{
+  height: 70vh;
+  margin-left: 22%;
+  overflow-y: scroll;
+}
+.main-sec{
+  height: 100vh;
+overflow: hidden;
+}
+/* Customize the scrollbar container for both sections */
+.favourite-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+#container::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+.favourite-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+#container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+/* Customize the scrollbar container (the background area around the scrollbar) */
+.favourite-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+#container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Customize the scrollbar thumb on hover */
+.favourite-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+#container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+/* favouraite button */
+
+.favorite-button{
+  direction: rtl;
+  float: left;
+border: none;
+background-color: #fafafa;
+cursor: pointer;
+float: right;
+    text-align: right;
+    color:#ccc ;
+}
+.gray-star{
+  color:#ccc;
+}
+.orange-star {
+  color: orange; /* Change the color to orange */
+}
+.card .dragging{
+  opacity: .5;
+}
+
+  @media screen and (max-width: 768px) {
+     #favorite-section {
+        display: none;
+    }
+    #container{
+      margin-left: 0;
+    }
+
+    .filter-section{
+      flex-direction: column;
+    }
+    .input-group{
+      width: 100%;
+    }
+    .card-section{
+      overflow: auto;
+    }
+}
+@media screen and (min-width: 768px) {
+  .favorite-button {
+      display: none;
+  }
+}

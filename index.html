@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Font Awesome-->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!--css  -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap" rel="stylesheet">
+  <!--  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,600&display=swap" rel="stylesheet">
+
+
+
+</head>
+<title>Flags</title>
+</head>
+
+<body class="main-sec">
+
+
+  <header>
+    <!-- nav bar start here -->
+    <nav class="navbar navbar-expand-lg shadow-sm  w-auto">
+      <div class="container-fluid ms-lg-5 mt-1 mb-1">
+        <a class="navbar-brand  navbar-title" href="index.html"><b>Where in the world?</b></a>
+        <button class="btn btn-sm mode-toggle me-lg-5" id="darkModeToggle">
+          <i class="fa-regular fa-moon" id="darkModeIcon"></i> Dark Mode
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main class="container-fluid me-lg-5 mt-4 ">
+    <section class="ms-lg-5">
+      <div class="d-flex justify-content-between filter-section ">
+
+        <div class="input-group shadow-sm w-30">
+          <span class="input-group-text border-0 search-icon">
+            <i class="fa-solid fa-magnifying-glass ps-2" style="color: #858585;"></i>
+          </span>
+          <input class="form-control rounded search  border-0 rounded-1 fs" type="text"
+            placeholder="Search for a country...">
+        </div>
+
+
+        <select class="region-selector form-select  shadow-sm  border-0  category w-auto  me-5 me-2 ">
+          <option hidden>Filter by Region</option>
+          <option>Favorites</option>
+          <option>no filter</option>
+          <option>Africa</option>
+          <option>Americas</option>
+          <option>Asia</option>
+          <option>Europe</option>
+          <option>Oceania</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="ms-lg-5 me-lg-5 mt-2 d-flex justify-content-between mt-5 ">
+      <div class="w-25 favourite-section rounded-2 shadow-sm" id="favorite-section">
+        <div class="h-80 m-3 d-block favourite-container">
+        </div>
+
+      </div>
+      <div class="card-section">
+        <div class="row" id="container">
+        </div>
+
+    </section>
+
+
+  </main>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dark-mode-handle.js"></script>
+  <script src="js/api-call.js"></script>
+
+</body>
