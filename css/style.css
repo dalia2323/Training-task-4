@@ -7,6 +7,9 @@
     font-weight: 700;
 
 }
+a:hover{
+  color: unset;
+}
 .navbar-title{
   color: black;
 }
@@ -36,6 +39,21 @@
     background-color: #2b3945;
     color: #fff;
   }
+  .dark-mode #container::-webkit-scrollbar-track
+  {
+    background-color: #2b3945;
+
+  }
+  .dark-mode .favorite-button
+  {
+    background-color: #2b3945;
+
+  }
+  .dark-mode .favourite-container::-webkit-scrollbar-track
+  {
+    background-color: #202c37;
+
+  }
 
   .dark-mode #darkModeToggle{
     color: #fff;
@@ -45,7 +63,15 @@
     color: #fff;
     border: none;
   }
-  
+  .dark-mode .favourite-section{
+    background-color:#2b3945;
+    color: #fff;
+    border: none;
+  }
+  .dark-mode .cancel-button{
+    background-color:#2b3945;
+
+  }
   .dark-mode .card-title {
     color: #fff;
   }
@@ -93,30 +119,40 @@
   height: 70%;
   position: fixed;
   background-color: #ffff;
-  font-family: 'Nunito Sans', sans-serif;
-font-weight: 900 !important;
-  /* margin-top: 2%; */
+  border-radius: 6px;
 }
 .h-80{
-  height: 95%;
+  height: 80%;
 
 }
 .favourite-container{
   flex-direction: column;
   overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: .5rem;
+  align-items: center;
 }
 .favourite-item-img{
   width: 15%;
+  height: 5%; 
   border-bottom-left-radius: 2%;
+color: #bcbec2;;
+margin-right: .5rem; 
 
 }
 
 .cancel-button{
   background-color: #fff;
-  padding-left: 45%;
+  margin-left: auto; 
+
 }
 
-
+.favourite-item-name{
+  line-height: 1.5em;
+  text-align: left;
+  font-size: 13px;
+font-weight: 700;
+}
 
 #container{
   height: 70vh;
@@ -127,7 +163,6 @@ font-weight: 900 !important;
   height: 100vh;
 overflow: hidden;
 }
-/* Customize the scrollbar container for both sections */
 .favourite-container::-webkit-scrollbar {
   width: 10px;
 }
@@ -136,7 +171,6 @@ overflow: hidden;
   width: 10px;
 }
 
-/* Customize the scrollbar thumb (the draggable part) */
 .favourite-container::-webkit-scrollbar-thumb {
   background-color: #888;
   border-radius: 5px;
@@ -147,7 +181,6 @@ overflow: hidden;
   border-radius: 5px;
 }
 
-/* Customize the scrollbar container (the background area around the scrollbar) */
 .favourite-container::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
@@ -155,8 +188,6 @@ overflow: hidden;
 #container::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
-
-/* Customize the scrollbar thumb on hover */
 .favourite-container::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
@@ -164,7 +195,6 @@ overflow: hidden;
 #container::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
-/* favouraite button */
 
 .favorite-button{
   direction: rtl;
@@ -180,7 +210,7 @@ float: right;
   color:#ccc;
 }
 .orange-star {
-  color: orange; /* Change the color to orange */
+  color: orange;
 }
 .card .dragging{
   opacity: .5;
@@ -199,9 +229,17 @@ float: right;
     }
     .input-group{
       width: 100%;
+      margin-bottom: 2rem;
     }
     .card-section{
       overflow: auto;
+    }
+    .region-selector{
+      margin-left: 1%;
+      width: 40% !important;
+    }
+    .card-favorite-section{
+      margin-top: 2rem !important;
     }
 }
 @media screen and (min-width: 768px) {

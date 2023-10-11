@@ -5,13 +5,11 @@ let search = document.querySelector(".search");
 let category = document.querySelector('.category');
 let favoriteSection = document.getElementsByClassName('favourite-container')[0];
 let favoriteCountries = JSON.parse(localStorage.getItem('favoriteCountries')) || [];
-console.log(favoriteCountries)
 displayFavoriteCountries();
 ////////////////////
 search.addEventListener('keyup', displayCountries);
 category.addEventListener('change', displayCountries);
 ///////////////////
-
 function displayCountries() {
   let result = '';
   let searchValue = search.value.toLowerCase();
@@ -39,7 +37,7 @@ function displayCountries() {
       if (favoriteCountries.find(f => f.isFav === true && f.name.toLowerCase() === country.name.common.toLowerCase())) c = 'orange-star';
       result += `
         <div class="col-lg-4 col-md-4 col-sm-6 f-sm-2 mb-3">
-          <div class="card rounded-3 m-3 mb-3 me-3 ms-3 shadow-sm">
+          <div class="card rounded-3 mb-3 me-3 ms-3 shadow-sm">
             <img src='${country.flags.png}' class="card-img-top" alt="...">
             <div class="card-body mb-3">
               <h5 class="card-">${country.name.common}</h5>
@@ -91,20 +89,21 @@ favoriteSection.addEventListener('drop', function (event) {
     displayFavoriteCountries();
   }
 });
+///////////////////////
 function displayFavoriteCountries() {
   let result = '';
   favoriteCountries.forEach(c => {
     if (c.isFav) {
       result += `
-    <div class="d-flex mb-2 ">
+    <div class="d-flex mb-2 justify-content-between">
     <img src="${c.imgSrc}" class="favourite-item-img" >
-      <p class="favourite-item-name pt-3 ps-2">${c.name} </p>
+      <p class="favourite-item-name ">${c.name} </p>
       <button class="border-0 cancel-button">
-        <i class="fa-solid fa-circle-xmark" style="color: #8f9194;"></i>  </button>
+        <i class="fa-solid fa-circle-xmark" style="color: #bcbec2;"></i>  </button>
 
     </div>`}
   })
-  favoriteSection.innerHTML = '<p class="mb-3">Favorites</p>' + result;
+  favoriteSection.innerHTML =  result;
 }
 
 ////////////////////////
@@ -164,5 +163,4 @@ function updateOptionText() {
 }
 
 updateOptionText();
-
 window.addEventListener('resize', updateOptionText);
