@@ -5,6 +5,8 @@ let search = document.querySelector(".search");
 let category = document.querySelector('.category');
 let favoriteSection = document.getElementsByClassName('favourite-container')[0];
 let favoriteCountries = JSON.parse(localStorage.getItem('favoriteCountries')) || [];
+const favorite = document.getElementById('favorite-section');
+const card=document.getElementById('card');
 displayFavoriteCountries();
 ////////////////////
 search.addEventListener('keyup', displayCountries);
@@ -37,7 +39,7 @@ function displayCountries() {
       if (favoriteCountries.find(f => f.isFav === true && f.name.toLowerCase() === country.name.common.toLowerCase())) c = 'orange-star';
       result += `
         <div class="col-lg-4 col-md-4 col-sm-6 f-sm-2 mb-3">
-          <div class="card rounded-3 mb-3 me-3 ms-3 shadow-sm">
+          <div class="card rounded-3 mb-3 me-3 ms-3 shadow-sm" id="card">
             <img src='${country.flags.png}' class="card-img-top" alt="...">
             <div class="card-body mb-3">
               <h5 class="card-">${country.name.common}</h5>
@@ -60,11 +62,27 @@ function displayCountries() {
   cards.forEach(card => {
     card.draggable = true;
     card.addEventListener('dragstart', handleDragStart);
+    
+  })
+  cards.forEach(card => {
+    card.addEventListener('dragstart', ()=>
+    {
+      favorite.classList.add("draggable");
+      card.classList.add("card-opicty");
+    });
+    
+  })
+  cards.forEach(card => {
+    card.addEventListener('dragend', ()=>
+    {
+      card.classList.remove("card-opicty");
+      favorite.classList.remove("draggable");
+
+    });
+    
   })
   // ///////////////////////
 }
-
-
 // Load favorite countries from local storage
 function handleDragStart(event) {
   event.dataTransfer.setData('text/plain', event.target.outerHTML);

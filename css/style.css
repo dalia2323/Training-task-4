@@ -120,11 +120,14 @@ a:hover{
   position: fixed;
   background-color: #ffff;
   border-radius: 6px;
+
+
 }
 .h-80{
   height: 80%;
 
 }
+
 .favourite-container{
   flex-direction: column;
   overflow-y: scroll;
@@ -212,9 +215,15 @@ float: right;
 .orange-star {
   color: orange;
 }
-.card .dragging{
-  opacity: .5;
+.draggable{
+  border-style: solid;
+  border-color: #27ae60;
 }
+.card-opicty{
+  opacity: .5;
+  cursor: move;
+}
+
 
   @media screen and (max-width: 768px) {
      #favorite-section {
